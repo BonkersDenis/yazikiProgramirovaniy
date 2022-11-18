@@ -1,0 +1,21 @@
+using System;
+
+namespace cikol3
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Visota = ");
+
+            int elka  = int.Parse(Console.ReadLine());
+            int dlina= elka;
+            for (int i = 0, z = 1; i < elka; i++, z += 2)
+            {
+                Console.Write(new string(' ', dlina--));
+                Console.Write(new string('*', z));
+                Console.WriteLine();
+            }
+        }
+    }
+}
