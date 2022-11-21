@@ -1,0 +1,29 @@
+
+using System;
+
+namespace Progmassiv
+{
+    class Program
+    {
+        static void Main()
+        {
+
+            string chislo1 = Console.ReadLine();
+            string chislo2 = Console.ReadLine();
+
+            for (int i = 0; i < chislo1.Length; i++)
+            {
+                for (int s = 0; s < chislo2.Length; s++)
+                {
+
+                    if (chislo1[i] == chislo2[s]) break;
+                    if (s == chislo2.Length - 1 && chislo2[s] != chislo1[i])
+                        if ((i == 0 || chislo1[i] > chislo1[i - 1]) && (i == chislo1.Length - 1 || chislo1[i] < chislo1[i + 1]))
+                            Console.WriteLine("Уникальное число " + chislo1[i] + " ");
+
+                }
+            }
+
+        }
+    }
+}
