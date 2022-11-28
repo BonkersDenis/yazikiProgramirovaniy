@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+
+
+public class Example
+{
+    public static void Main()
+    {
+        List<string> dinosaurs = new List<string> { "Q", "Q", "Q", "O" };
+
+
+
+        Console.WriteLine("po indexy 'O': {0}", dinosaurs.IndexOf("O")) ;
+
+
+    }
+}
