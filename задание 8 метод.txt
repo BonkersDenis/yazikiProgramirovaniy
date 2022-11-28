@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class MainClass
+{
+
+    static void Print(string amount, int symbol)
+    {
+       
+        string fff = string.Empty;
+        for (int i = 0; i < symbol; i++)
+        {
+            fff += amount;
+        }
+        Console.Write(fff);
+       
+    }
+
+    public static void Main()
+    {
+        string amount = Console.ReadLine();
+        int symbol = int.Parse(Console.ReadLine());
+        Print(amount, symbol);
+    }
+}

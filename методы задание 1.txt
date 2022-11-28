@@ -1,0 +1,28 @@
+using System;
+
+
+namespace metod
+{
+    class Program
+    {
+        public static string text(string strochka)
+        {
+            for (int i = 0; i != strochka.Length; i++)
+            {
+                if (strochka[i] == 'e')
+                {
+                    return (" est latinskaya bykva!");
+                }
+
+            }
+            return (" nety latinskih bykva");
+        }
+        static void Main()
+        {
+            Console.WriteLine("Vvedite text : ");
+            string vvod = Console.ReadLine();
+
+            Console.WriteLine(text(vvod));
+        }
+    }
+}
