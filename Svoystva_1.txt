@@ -1,0 +1,19 @@
+using System;
+internal class Tree
+{
+    public Tree (string vvod_string, int vvod_int)
+    {
+        derevo = vvod_string;
+        cifra= vvod_int;
+    }
+    private string derevo;
+    private int cifra;
+}
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        var tree1 = new Tree("сосна", -6);
+        var tree2 = new Tree("береза", 80);
+    }
+}
