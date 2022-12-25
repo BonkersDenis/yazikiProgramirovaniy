@@ -1,0 +1,40 @@
+using System;
+
+namespace Денис_коллекции_4
+{
+    internal class Worker
+    {
+        public Worker(string name_input, string surname_input, int rate_input, int days_input)
+        {
+            name = name_input;
+            surname= surname_input;
+            rate = rate_input; 
+            days= days_input;
+        }        
+        public void GetFullName()
+        {
+            Console.WriteLine($"{name} {surname}");
+        }
+        public int GetSallary()
+        {
+            return rate * days;
+        }
+
+        private string name;
+        private string surname;
+        private int rate;
+        private int days;
+    }
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Worker asd = new Worker("asd", "asd", 120, 12);
+            asd.GetFullName();
+            int i = asd.GetSallary();
+            Console.WriteLine(i);   
+        }
+    }
+}
