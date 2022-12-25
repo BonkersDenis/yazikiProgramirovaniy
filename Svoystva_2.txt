@@ -1,0 +1,69 @@
+using System;
+
+
+internal class Vasya
+{
+    public Vasya(string name_input, int age_input)
+    {
+        age = Age_check(age_input);
+        name = Name_check(name_input);
+    }
+
+    static private string Name_check(string name_input)
+    {
+        if (name_input != "Василий")
+            return $"Я не {name_input}, а Василий!";
+
+        return name_input;
+    }
+    static private int Age_check(int age_input)
+    {
+        if (age_input < 0)
+            return 0;
+        else if (age_input > 122)
+            return 122;
+        else
+            return age_input;
+    }
+    public int Age
+    {
+        get { return age; }
+        set { age = value; }
+    }
+    public string Name
+    {
+        get { return name; }
+        set { name = Name_check(value); }
+    }
+    public void RunMe()
+    {
+        Console.WriteLine(name);
+        string second_number = Convert.ToString(age % 10);
+
+        if (((age > 10) && (age < 20)) || ((age > 110) && (age < 120)))
+        {
+            Console.WriteLine($"Мне {age} лет");
+        }
+        else
+        {
+            if (second_number == "1")
+                Console.WriteLine($"Мне {age} год");
+            else if ((second_number == "2") || (second_number == "3") || (second_number == "4"))
+                Console.WriteLine($"Мне {age} года");
+            else
+                Console.WriteLine($"Мне {age} лет");
+        }
+    }
+    private int age;
+    private string name;
+}
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Vasya Surprise = new Vasya("Василий", 121);
+        Surprise.Name = "Максим";
+        Surprise.Age = 12;
+        Surprise.RunMe();
+    }
+}
