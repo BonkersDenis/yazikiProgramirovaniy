@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Денис_коллекции_4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] posl = Console.ReadLine().Split();
+            int [] massiv_vvoda = new int[posl.Length];
+            List<int> vse_chisla = new List<int>();   
+
+            for (int i = 0; i != posl.Length; i++)
+                massiv_vvoda[i] = Convert.ToInt32(posl[i]);
+
+            for (int i = massiv_vvoda.First(); i != massiv_vvoda.Last(); i++)
+                vse_chisla.Add(i);
+
+            var propushennii_chisla = vse_chisla.Except(massiv_vvoda);
+
+            for (int i = 0; i != propushennii_chisla.Count(); i++)
+                Console.Write($"{propushennii_chisla.ElementAt(i)} ");
+        }
+    }
+}
